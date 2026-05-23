@@ -1,0 +1,413 @@
+{% extends "base.html" %} {% block title %}Contact - Shohan Biswas{% endblock %} {%
+block content %}
+
+<section class="contact-hero">
+    <div class="hero-content">
+        <h1>Get in Touch</h1>
+        <p class="hero-subtitle">
+            Have a project in mind or need help? I'd love to hear from you.
+        </p>
+    </div>
+</section>
+
+<section class="section contact-layout">
+    <div class="contact-grid">
+        <div class="contact-info animate-card">
+            <h2>Let's Talk</h2>
+            <p class="contact-description">
+                Feel free to reach out for collaborations, freelance work, or technical
+                discussions. I'm always open to new opportunities and interesting projects.
+            </p>
+
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Email</h3>
+                        <a href="mailto:email@example.com">email@example.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Location</h3>
+                        <span>Dhaka, Bangladesh</span>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Availability</h3>
+                        <span>Monday - Friday, 9:00 AM - 6:00 PM (GMT+6)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-social">
+                <h3>Social</h3>
+                <div class="social-icons">
+                    <a href="#" title="GitHub" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" title="LinkedIn" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" title="Fiverr" class="social-link">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="#" title="Twitter" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" title="ResearchGate" class="social-link">
+                        <i class="fas fa-flask"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="location-image">
+                <div class="location-image-placeholder">
+                    <i class="fas fa-map"></i>
+                    <span>Location</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-container animate-card">
+            <h2>Send a Message</h2>
+            {% if success %}
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                Thank you for your message! I'll get back to you soon.
+            </div>
+            {% endif %}
+            <form method="POST" action="{{ url_for('contact_post') }}" class="contact-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+                </div>
+
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell me about your project or question..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-full">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="section faq">
+    <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about working with me</p>
+    </div>
+    <div class="faq-grid">
+        <div class="faq-card animate-card">
+            <div class="faq-icon">
+                <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>What services do you offer?</h3>
+            <p>
+                I offer Google Workspace setup, email migration, DNS configuration,
+                email deliverability fixes, and custom web development services.
+            </p>
+        </div>
+        <div class="faq-card animate-card">
+            <div class="faq-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <h3>How quickly can you start?</h3>
+            <p>
+                I can typically start within 24-48 hours of receiving all necessary
+                information and access to your systems.
+            </p>
+        </div>
+        <div class="faq-card animate-card">
+            <div class="faq-icon">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h3>What is your pricing structure?</h3>
+            <p>
+                Pricing varies based on project scope. I offer both fixed-price packages
+                and hourly consulting rates. Contact me for a custom quote.
+            </p>
+        </div>
+        <div class="faq-card animate-card">
+            <div class="faq-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Do you offer support after completion?</h3>
+            <p>
+                Yes! I provide a 30-day support period after project completion for any
+                issues or questions related to the work done.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contact-hero {
+        padding: 4rem var(--content-padding) 2rem;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contact-hero .hero-content h1 {
+        font-size: var(--text-4xl);
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+
+    .contact-hero .hero-subtitle {
+        color: var(--text-muted);
+        font-size: var(--text-lg);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .contact-info {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-info h2 {
+        font-size: var(--text-2xl);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 0;
+    }
+
+    .contact-description {
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .contact-method {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .method-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-md);
+        background: var(--bg-tag);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--accent-primary);
+        flex-shrink: 0;
+    }
+
+    .method-details h3 {
+        font-size: var(--text-sm);
+        font-weight: 600;
+        margin: 0 0 0.25rem;
+        color: var(--text-primary);
+    }
+
+    .method-details a,
+    .method-details span {
+        color: var(--text-secondary);
+        font-size: var(--text-sm);
+    }
+
+    .method-details a:hover {
+        color: var(--accent-primary);
+    }
+
+    .contact-social h3 {
+        font-size: var(--text-sm);
+        font-weight: 600;
+        margin: 0 0 0.75rem;
+        color: var(--text-primary);
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    .social-icons .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: var(--radius-md);
+        background: var(--bg-tertiary);
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        transition: all var(--transition-fast);
+        border: 1px solid var(--border-color);
+    }
+
+    .social-icons .social-link:hover {
+        background: var(--accent-primary);
+        color: var(--text-inverse);
+        transform: translateY(-2px);
+    }
+
+    .contact-info .location-image { margin-top: 1rem; }
+
+    .location-image-placeholder {
+        width: 100%;
+        height: 160px;
+        border-radius: var(--radius-md);
+        background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+        border: 2px dashed var(--border-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        color: var(--text-muted);
+        font-size: var(--text-sm);
+        position: relative;
+        overflow: hidden;
+        transition: all var(--transition-fast);
+    }
+
+    .location-image-placeholder::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 40% 40%, rgba(74, 108, 247, 0.08), transparent 70%);
+    }
+
+    .location-image-placeholder i { font-size: 2rem; opacity: 0.4; }
+
+    .location-image-placeholder:hover { border-color: var(--accent-primary); }
+
+    .contact-form-container {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 2.5rem;
+    }
+
+    .contact-form-container h2 {
+        font-size: var(--text-2xl);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--text-primary);
+    }
+
+    .contact-form .form-group label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contact-form .form-group label i {
+        color: var(--accent-primary);
+        font-size: 0.85rem;
+    }
+
+    .contact-form .form-group textarea { min-height: 120px; }
+
+    .contact-form .btn { margin-top: 0.5rem; }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .faq-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        transition: all var(--transition-base);
+    }
+
+    .faq-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent-primary);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .faq-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-md);
+        background: var(--bg-tag);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: var(--accent-primary);
+        margin-bottom: 1rem;
+    }
+
+    .faq-card h3 {
+        font-size: var(--text-base);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .faq-card p {
+        color: var(--text-secondary);
+        font-size: var(--text-sm);
+        line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+        .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+        .faq-grid { grid-template-columns: 1fr; }
+    }
+</style>
+{% endblock %}

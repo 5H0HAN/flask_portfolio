@@ -1,0 +1,836 @@
+{% extends "base.html" %} {% block title %}Home - Shohan Biswas{% endblock %} {%
+block content %}
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                <span>Available for freelance work</span>
+            </div>
+            <h1 class="hero-title animate-fade-in">
+                Hi, I'm <span class="text-gradient">Shohan Biswas</span>
+            </h1>
+            <h2 class="hero-subtitle animate-fade-in">
+                Computer Science Graduate | Developer | Google Workspace
+                Specialist
+            </h2>
+            <p class="hero-description animate-fade-in">
+                Building AI tools, backend systems, and secure email
+                infrastructures. Turning complex problems into elegant
+                solutions.
+            </p>
+            <div class="hero-buttons animate-fade-in">
+                <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg"
+                    ><i class="fas fa-code"></i> View Projects</a
+                >
+                <a href="{{ url_for('services') }}" class="btn btn-secondary btn-lg"
+                    ><i class="fas fa-briefcase"></i> Services</a
+                >
+                <a href="{{ url_for('contact') }}" class="btn btn-outline btn-lg"
+                    ><i class="fas fa-envelope"></i> Contact Me</a
+                >
+            </div>
+            <div class="hero-social animate-fade-in">
+                <a href="#" title="GitHub" class="social-link"
+                    ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" title="LinkedIn" class="social-link"
+                    ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" title="Fiverr" class="social-link"
+                    ><i class="fas fa-globe"></i
+                ></a>
+                <a href="#" title="ResearchGate" class="social-link"
+                    ><i class="fas fa-flask"></i
+                ></a>
+                <a href="mailto:email@example.com" title="Email" class="social-link"
+                    ><i class="fas fa-envelope"></i
+                ></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-image-placeholder">
+                <i class="fas fa-user-astronaut"></i>
+                <span>Hero Portrait</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section about-preview">
+    <div class="about-preview-container">
+        <div class="about-image">
+            <div class="image-placeholder">
+                <i class="fas fa-image"></i>
+                <span class="image-placeholder-text">About Image / Photo</span>
+            </div>
+        </div>
+        <div class="about-content">
+            <h2 class="section-title">
+                <i class="fas fa-user"></i> About Me
+            </h2>
+            <p>
+                Computer science graduate interested in artificial intelligence,
+                backend systems, and secure communication infrastructure. I'm
+                passionate about building robust, scalable solutions that solve
+                real-world problems.
+            </p>
+            <p>
+                With expertise in both software development and IT
+                infrastructure, I bridge the gap between code and
+                infrastructure, delivering end-to-end solutions.
+            </p>
+            <a href="{{ url_for('about') }}" class="btn btn-primary"
+                >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+        </div>
+    </div>
+</section>
+
+<section class="section featured-projects">
+    <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>A selection of my best technical work</p>
+    </div>
+    <div class="grid-3">
+        <div class="card animate-card">
+            <div class="card-image-placeholder">
+                <i class="fas fa-brain"></i>
+                <span>AI Image Recognition</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">AI Image Recognition System</h3>
+                <p class="card-description">
+                    A deep learning model for recognizing objects in images
+                    using PyTorch and computer vision techniques.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">Computer Vision</span>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn btn-primary btn-sm"
+                        ><i class="fab fa-github"></i> Repository</a
+                    >
+                    <a href="#" class="btn btn-secondary btn-sm"
+                        >Demo <i class="fas fa-external-link-alt"></i
+                    ></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card animate-card">
+            <div class="card-image-placeholder">
+                <i class="fas fa-server"></i>
+                <span>Email Infrastructure</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Email Infrastructure Automation</h3>
+                <p class="card-description">
+                    Automated system for managing email servers and DNS
+                    configurations with real-time monitoring.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">PostgreSQL</span>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn btn-primary btn-sm"
+                        ><i class="fab fa-github"></i> Repository</a
+                    >
+                    <a href="#" class="btn btn-secondary btn-sm"
+                        >Demo <i class="fas fa-external-link-alt"></i
+                    ></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card animate-card">
+            <div class="card-image-placeholder">
+                <i class="fas fa-laptop-code"></i>
+                <span>Portfolio Website</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Portfolio Website</h3>
+                <p class="card-description">
+                    Modern portfolio website built with Flask and responsive
+                    design, featuring dark mode and smooth animations.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn btn-primary btn-sm"
+                        ><i class="fab fa-github"></i> Repository</a
+                    >
+                    <a href="#" class="btn btn-secondary btn-sm"
+                        >Demo <i class="fas fa-external-link-alt"></i
+                    ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg"
+            >View All Projects <i class="fas fa-arrow-right"></i
+        ></a>
+    </div>
+</section>
+
+<section class="section services-preview">
+    <div class="section-header">
+        <h2>Freelance Services</h2>
+        <p>Professional solutions for your business needs</p>
+    </div>
+    <div class="grid-4">
+        <div class="service-card animate-card">
+            <div class="service-icon">
+                <i class="fab fa-google"></i>
+            </div>
+            <h3>Google Workspace Setup</h3>
+            <p>Complete setup with domain verification and user management</p>
+        </div>
+        <div class="service-card animate-card">
+            <div class="service-icon">
+                <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <h3>Email Migration</h3>
+            <p>Seamless migration from any platform to Google Workspace</p>
+        </div>
+        <div class="service-card animate-card">
+            <div class="service-icon">
+                <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>DNS & Deliverability</h3>
+            <p>SPF, DKIM, DMARC setup and spam troubleshooting</p>
+        </div>
+        <div class="service-card animate-card">
+            <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Infrastructure Security</h3>
+            <p>Secure business email infrastructure and mail routing</p>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg"
+            >View Services <i class="fas fa-arrow-right"></i
+        ></a>
+    </div>
+</section>
+
+<section class="section skills-snapshot">
+    <div class="section-header">
+        <h2>Tech Stack</h2>
+        <p>Technologies I work with every day</p>
+    </div>
+    <div class="skills-grid">
+        <div class="skill-category animate-card">
+            <div class="skill-icon-wrapper">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Programming</h3>
+                <div class="skill-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">C++</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-category animate-card">
+            <div class="skill-icon-wrapper">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Frameworks</h3>
+                <div class="skill-tags">
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Flask</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-category animate-card">
+            <div class="skill-icon-wrapper">
+                <i class="fas fa-tools"></i>
+            </div>
+            <div class="skill-content">
+                <h3>Tools</h3>
+                <div class="skill-tags">
+                    <span class="tag">Git</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">VS Code</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="{{ url_for('skills') }}" class="btn btn-secondary btn-lg"
+            >All Skills <i class="fas fa-arrow-right"></i
+        ></a>
+    </div>
+</section>
+
+<section class="section testimonials">
+    <div class="section-header">
+        <h2>Client Testimonials</h2>
+        <p>What my clients say about my work</p>
+    </div>
+    <div class="grid-3">
+        <div class="testimonial-card animate-card">
+            <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+                "Shohan delivered excellent work on our Google Workspace
+                migration. Professional, efficient, and knowledgeable."
+            </p>
+            <div class="testimonial-author">
+                <div class="author-avatar placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                    <h4>John Doe</h4>
+                    <span>CEO, TechCorp</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card animate-card">
+            <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+                "Highly recommended! The email deliverability fix saved our
+                business communication."
+            </p>
+            <div class="testimonial-author">
+                <div class="author-avatar placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                    <h4>Jane Smith</h4>
+                    <span>Marketing Director</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card animate-card">
+            <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+                "Great service, fast delivery, and excellent communication
+                throughout the project."
+            </p>
+            <div class="testimonial-author">
+                <div class="author-avatar placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                    <h4>Michael Brown</h4>
+                    <span>Startup Founder</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section blog-preview">
+    <div class="section-header">
+        <h2>Latest from the Blog</h2>
+        <p>Technical articles and insights</p>
+    </div>
+    <div class="grid-3">
+        <article class="card animate-card">
+            <div class="card-image-placeholder">
+                <i class="fas fa-robot"></i>
+                <span>AI Article</span>
+            </div>
+            <div class="card-content">
+                <span class="blog-date"
+                    ><i class="fas fa-calendar"></i> Jan 15, 2025</span
+                >
+                <h3 class="card-title">Getting Started with PyTorch</h3>
+                <p class="card-description">
+                    A beginner's guide to building neural networks with PyTorch
+                    and Python.
+                </p>
+                <a href="#" class="btn btn-sm btn-outline">Read More</a>
+            </div>
+        </article>
+        <article class="card animate-card">
+            <div class="card-image-placeholder">
+                <i class="fas fa-envelope"></i>
+                <span>Tech Article</span>
+            </div>
+            <div class="card-content">
+                <span class="blog-date"
+                    ><i class="fas fa-calendar"></i> Jan 10, 2025</span
+                >
+                <h3 class="card-title">Email Deliverability Best Practices</h3>
+                <p class="card-description">
+                    Essential tips for improving your email delivery rates and
+                    avoiding spam folders.
+                </p>
+                <a href="#" class="btn btn-sm btn-outline">Read More</a>
+            </div>
+        </article>
+        <article class="card animate-card">
+            <div class="card-image-placeholder">
+                <i class="fas fa-cloud"></i>
+                <span>Tutorial</span>
+            </div>
+            <div class="card-content">
+                <span class="blog-date"
+                    ><i class="fas fa-calendar"></i> Jan 5, 2025</span
+                >
+                <h3 class="card-title">Google Workspace Migration Guide</h3>
+                <p class="card-description">
+                    Step-by-step guide to migrating your business to Google
+                    Workspace.
+                </p>
+                <a href="#" class="btn btn-sm btn-outline">Read More</a>
+            </div>
+        </article>
+    </div>
+    <div class="text-center mt-4">
+        <a href="{{ url_for('blog') }}" class="btn btn-secondary btn-lg"
+            >View All Posts <i class="fas fa-arrow-right"></i
+        ></a>
+    </div>
+</section>
+
+<section class="section contact-cta">
+    <div class="cta-container">
+        <h2>Let's Work Together</h2>
+        <p>
+            Interested in collaborating or need help with email infrastructure?
+            I'm just a message away.
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg"
+            >Get in Touch <i class="fas fa-arrow-right"></i
+        ></a>
+    </div>
+</section>
+
+<style>
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 var(--content-padding);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(
+            circle,
+            rgba(74, 108, 247, 0.08) 0%,
+            transparent 70%
+        );
+        pointer-events: none;
+    }
+
+    .hero-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 4rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(40, 212, 105, 0.1);
+        border: 1px solid rgba(40, 212, 105, 0.3);
+        border-radius: var(--radius-full);
+        color: var(--accent-success);
+        font-size: var(--text-sm);
+        font-weight: 500;
+        width: fit-content;
+    }
+
+    .badge-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--accent-success);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+
+    .hero-title {
+        font-size: var(--text-5xl);
+        font-weight: 800;
+        line-height: 1.1;
+        margin: 0;
+        color: var(--text-primary);
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-xl);
+        font-weight: 500;
+        color: var(--text-secondary);
+    }
+
+    .hero-description {
+        font-size: var(--text-base);
+        color: var(--text-muted);
+        max-width: 500px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-social {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-md);
+        background: var(--bg-tertiary);
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        transition: all var(--transition-fast);
+        border: 1px solid var(--border-color);
+    }
+
+    .social-link:hover {
+        background: var(--accent-primary);
+        color: var(--text-inverse);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-glow);
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image-placeholder {
+        width: 350px;
+        height: 350px;
+        border-radius: var(--radius-xl);
+        background: linear-gradient(
+            135deg,
+            var(--bg-tertiary) 0%,
+            var(--bg-secondary) 100%
+        );
+        border: 2px dashed var(--border-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: var(--text-muted);
+        font-size: var(--text-sm);
+        position: relative;
+        overflow: hidden;
+        transition: all var(--transition-fast);
+    }
+
+    .hero-image-placeholder::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            circle at 30% 30%,
+            rgba(74, 108, 247, 0.1),
+            transparent 70%
+        );
+    }
+
+    .hero-image-placeholder:hover {
+        border-color: var(--accent-primary);
+    }
+
+    .hero-image-placeholder i {
+        font-size: 5rem;
+        opacity: 0.3;
+    }
+
+    .about-preview-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .about-preview .about-content p {
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        line-height: 1.7;
+    }
+
+    .service-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        text-align: center;
+        transition: all var(--transition-base);
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent-primary);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: var(--radius-md);
+        background: var(--bg-tag);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.25rem;
+        font-size: 1.5rem;
+        color: var(--accent-primary);
+    }
+
+    .service-card h3 {
+        font-size: var(--text-lg);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .service-card p {
+        color: var(--text-muted);
+        font-size: var(--text-sm);
+        line-height: 1.6;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .skill-category {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        transition: all var(--transition-fast);
+    }
+
+    .skill-category:hover {
+        border-color: var(--accent-primary);
+    }
+
+    .skill-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-md);
+        background: var(--bg-tag);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        color: var(--accent-primary);
+        flex-shrink: 0;
+    }
+
+    .skill-content h3 {
+        font-size: var(--text-base);
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+    }
+
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .testimonials .grid-3 {
+        gap: 2rem;
+    }
+
+    .testimonial-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        transition: all var(--transition-base);
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .testimonial-stars {
+        color: var(--accent-warning);
+        margin-bottom: 1rem;
+        font-size: var(--text-sm);
+        letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+        color: var(--text-secondary);
+        font-style: italic;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .author-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--bg-tertiary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    .author-avatar.placeholder {
+        border: 2px dashed var(--border-color);
+    }
+
+    .author-info h4 {
+        font-size: var(--text-sm);
+        font-weight: 600;
+        margin: 0;
+        color: var(--text-primary);
+    }
+
+    .author-info span {
+        font-size: var(--text-xs);
+        color: var(--text-muted);
+    }
+
+    .blog-date {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: var(--text-muted);
+        font-size: var(--text-xs);
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-cta .cta-container {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-xl);
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    .contact-cta h2 {
+        font-size: var(--text-3xl);
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+
+    .contact-cta p {
+        color: var(--text-muted);
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+    }
+
+    .mt-4 {
+        margin-top: 2rem;
+    }
+
+    .animate-fade-in {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .animate-fade-in:nth-child(1) { animation-delay: 0.1s; }
+    .animate-fade-in:nth-child(2) { animation-delay: 0.2s; }
+    .animate-fade-in:nth-child(3) { animation-delay: 0.3s; }
+    .animate-fade-in:nth-child(4) { animation-delay: 0.4s; }
+    .animate-fade-in:nth-child(5) { animation-delay: 0.5s; }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 1024px) {
+        .hero-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 2rem;
+        }
+        .hero-image { order: -1; }
+        .hero-badge, .hero-description, .hero-buttons, .hero-social {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .about-preview-container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .about-preview .about-image { order: -1; }
+    }
+
+    @media (max-width: 768px) {
+        .hero-buttons { flex-direction: column; width: 100%; }
+        .hero-title { font-size: var(--text-4xl); }
+        .hero-image-placeholder { width: 250px; height: 250px; }
+        .skills-grid { grid-template-columns: 1fr; }
+    }
+</style>
+{% endblock %}
